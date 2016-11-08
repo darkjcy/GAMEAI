@@ -1,0 +1,18 @@
+﻿빌드 시작: 2015-12-07 오후 5:57:28
+     1>2 노드의 "C:\Users\jang chang young\Documents\Visual Studio 2013\Projects\MFCSTD\MFCSTD.vcxproj" 프로젝트(Build 대상)입니다.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (MFCSTD.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\fin.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MFCSTD.cpp
+         MFCSTD.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jang chang young\Documents\Visual Studio 2013\Projects\MFCSTD\Debug\fin.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\jang chang young\Documents\Visual Studio 2013\Projects\MFCSTD\Debug\fin.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\jang chang young\Documents\Visual Studio 2013\Projects\MFCSTD\Debug\fin.lib" /MACHINE:X86 Debug\MFCSTD.res
+         Debug\ChildView.obj
+         Debug\MainFrm.obj
+         Debug\MFCSTD.obj
+         Debug\stdafx.obj
+         MFCSTD.vcxproj -> C:\Users\jang chang young\Documents\Visual Studio 2013\Projects\MFCSTD\Debug\fin.exe
+     1>"C:\Users\jang chang young\Documents\Visual Studio 2013\Projects\MFCSTD\MFCSTD.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:14.68

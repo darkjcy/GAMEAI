@@ -1,0 +1,64 @@
+﻿  ChildView.cpp
+ChildView.cpp(190): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(191): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(192): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(193): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(194): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(195): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(196): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(197): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(198): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(199): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(200): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(201): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(202): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(203): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(204): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(205): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(206): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(207): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(208): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(209): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(210): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(211): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(212): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(213): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(214): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(215): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(216): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(217): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(218): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(219): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(220): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(221): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(337): warning C4805: '==': unsafe mix of type 'double' and type 'bool' in operation
+ChildView.cpp(339): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(345): warning C4805: '==': unsafe mix of type 'double' and type 'bool' in operation
+ChildView.cpp(347): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(400): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(401): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(403): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(407): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(421): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(440): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(441): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(443): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(447): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(460): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(468): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(472): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(483): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(493): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+ChildView.cpp(675): warning C4805: '==': unsafe mix of type 'double' and type 'bool' in operation
+ChildView.cpp(735): warning C4805: '==': unsafe mix of type 'double' and type 'bool' in operation
+ChildView.cpp(778): warning C4805: '==': unsafe mix of type 'double' and type 'bool' in operation
+ChildView.cpp(811): warning C4805: '==': unsafe mix of type 'double' and type 'bool' in operation
+  MFCSTD.cpp
+  MainFrm.cpp
+  Generating code
+  3 of 255 functions ( 1.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  MFCSTD.vcxproj -> D:\학습자료\2015_c++mfc\MFCSTD\MFCSTD\Release\fin.exe
+  MFCSTD.vcxproj -> D:\학습자료\2015_c++mfc\MFCSTD\MFCSTD\Release\fin.pdb (Full PDB)
