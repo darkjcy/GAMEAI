@@ -20,7 +20,7 @@ public:
 
 	int sp;
 	bool die;
-
+	bool Twall;
 	Player();
 	Player(int sizex, int sizey, double pointx, double porinty);
 
@@ -28,6 +28,7 @@ public:
 	void playermaxpoint();
 	void collision();
 	void dameged(bool col);
+	void landing();
 };
 
 class Ball
@@ -75,6 +76,47 @@ public:
 	{
 		pointx = -100;
 		pointy = -100;
+	}
+
+	void playerLanding(Player& p)
+	{
+		if ((pointx - sizex <p.pointx + p.sizeX  &&
+			pointx + sizex>p.pointx + p.sizeX) &&
+			(pointy - sizey < p.pointy - p.sizeY &&
+				pointy + sizey >p.pointy - p.sizeY))
+		{
+			p.Twall = true;
+			p.pointx = p.pointx - 2;
+		}
+
+		if ((pointx - sizex <p.pointx - p.sizeX  &&
+			pointx + sizex>p.pointx - p.sizeX) &&
+			(pointy - sizey < p.pointy - p.sizeY &&
+				pointy + sizey >p.pointy - p.sizeY))
+		{
+			p.Twall = true;
+			p.pointx = p.pointx + 2;
+		}
+
+		if ((pointx - sizex <p.pointx + p.sizeX  &&
+			pointx + sizex>p.pointx + p.sizeX) &&
+			(pointy - sizey < p.pointy + p.sizeY &&
+				pointy + sizey >p.pointy + p.sizeY))
+		{
+			p.onland = true;
+			p.pointy = p.pointy - 1.6;
+			p.gravity = 0;
+		}
+
+		if ((pointx - sizex <p.pointx - p.sizeX  &&
+			pointx + sizex>p.pointx - p.sizeX) &&
+			(pointy - sizey < p.pointy + p.sizeY &&
+				pointy + sizey >p.pointy + p.sizeY))
+		{
+			p.onland = true;
+			p.pointy = p.pointy - 1.6;
+			p.gravity = 0;
+		}
 	}
 
 };

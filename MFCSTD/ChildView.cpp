@@ -62,8 +62,8 @@ BOOL CChildView::PreCreateWindow(CREATESTRUCT& cs)
 //===========================================================================================객체 선언부분
 
 
-Player player1 = Player(20, 20, 20, 300);
-Player player2 = Player(20, 20, 1300, 350);
+Player player1 = Player(20, 20, 20, 100);
+Player player2 = Player(20, 20, 1200, 100);
 
 Ball ball = Ball();
 Land q0(-20, 400, 40, 30);
@@ -107,10 +107,9 @@ double yf = 0;
 double yforce = 0.5;
 double xforce;
 double ga = 0; // 발사 게이지 표시용 변수
-int WP = 1; // 플레이어 구분용 변수 1: player1, -1: player2
-bool Twall = false;
+int thisturnplayer = -1; // 플레이어 구분용 변수 1: player1, -1: player2
 int AirR = 0;
-bool soundon = false;
+
 double pointerpoint = 0;
 double K =1;
 double Y;
@@ -135,11 +134,11 @@ void CChildView::OnPaint()
 
 	if (player1.die == false && player2.die == false)
 	{
-		Twall = false;
 
 		player1.onland = false;
 		player1.playermaxpoint();
 		player1.playermove();
+
 
 		player2.onland = false;
 		player2.playermaxpoint();
@@ -183,6 +182,8 @@ void CChildView::OnPaint()
 
 		MemDC.SelectObject(&maincolorbrush);
 		MemDC.SelectObject(&blackpen);
+
+
 		//더블 버퍼링 화면 출력 내용 부분
 		MemDC.Rectangle(q1.pointx - q1.sizex, q1.pointy - q1.sizey, q1.pointx + q1.sizex, q1.pointy + q1.sizey);
 		MemDC.Rectangle(q2.pointx - q2.sizex, q2.pointy - q2.sizey, q2.pointx + q2.sizex, q2.pointy + q2.sizey);
@@ -256,73 +257,73 @@ void CChildView::OnPaint()
 
 
 		//플레이어 벽 충돌 코드
-		plcol(player1, q0);
-		plcol(player1, q1);
-		plcol(player1, q2);
-		plcol(player1, q3);
-		plcol(player1, q4);
-		plcol(player1, q5);
-		plcol(player1, q6);
-		plcol(player1, q7);
-		plcol(player1, q8);
-		plcol(player1, q9);
-		plcol(player1, q10);
-		plcol(player1, q11);
-		plcol(player1, q12);
-		plcol(player1, q13);
-		plcol(player1, q14);
-		plcol(player1, q15);
-		plcol(player1, q16);
-		plcol(player1, q17);
-		plcol(player1, q18);
-		plcol(player1, q19);
-		plcol(player1, q20);
-		plcol(player1, q21);
-		plcol(player1, q22);
-		plcol(player1, q23);
-		plcol(player1, q24);
-		plcol(player1, q25);
-		plcol(player1, q26);
-		plcol(player1, q27);
-		plcol(player1, q28);
-		plcol(player1, q29);
-		plcol(player1, q30);
-		plcol(player1, q31);
-		plcol(player1, q32);
+		q0.playerLanding(player1);
+		q1.playerLanding(player1);
+		q2.playerLanding(player1);
+		q3.playerLanding(player1);
+		q4.playerLanding(player1);
+		q5.playerLanding(player1);
+		q6.playerLanding(player1);
+		q7.playerLanding(player1);
+		q8.playerLanding(player1);
+		q9.playerLanding(player1);
+		q10.playerLanding(player1);
+		q11.playerLanding(player1);
+		q12.playerLanding(player1);
+		q13.playerLanding(player1);
+		q14.playerLanding(player1);
+		q15.playerLanding(player1);
+		q16.playerLanding(player1);
+		q17.playerLanding(player1);
+		q18.playerLanding(player1);
+		q19.playerLanding(player1);
+		q20.playerLanding(player1);
+		q21.playerLanding(player1);
+		q22.playerLanding(player1);
+		q23.playerLanding(player1);
+		q24.playerLanding(player1);
+		q25.playerLanding(player1);
+		q26.playerLanding(player1);
+		q27.playerLanding(player1);
+		q28.playerLanding(player1);
+		q29.playerLanding(player1);
+		q30.playerLanding(player1);
+		q31.playerLanding(player1);
+		q32.playerLanding(player1);
 
-		plcol(player2, q0);
-		plcol(player2, q1);
-		plcol(player2, q2);
-		plcol(player2, q3);
-		plcol(player2, q4);
-		plcol(player2, q5);
-		plcol(player2, q6);
-		plcol(player2, q7);
-		plcol(player2, q8);
-		plcol(player2, q9);
-		plcol(player2, q10);
-		plcol(player2, q11);
-		plcol(player2, q12);
-		plcol(player2, q13);
-		plcol(player2, q14);
-		plcol(player2, q15);
-		plcol(player2, q16);
-		plcol(player2, q17);
-		plcol(player2, q18);
-		plcol(player2, q19);
-		plcol(player2, q20);
-		plcol(player2, q21);
-		plcol(player2, q22);
-		plcol(player2, q23);
-		plcol(player2, q24);
-		plcol(player2, q25);
-		plcol(player2, q26);
-		plcol(player2, q27);
-		plcol(player2, q28);
-		plcol(player2, q29);
-		plcol(player2, q30);
-		plcol(player2, q31);
-		plcol(player2, q32);
+		q0.playerLanding(player2);
+		q1.playerLanding(player2);
+		q2.playerLanding(player2);
+		q3.playerLanding(player2);
+		q4.playerLanding(player2);
+		q5.playerLanding(player2);
+		q6.playerLanding(player2);
+		q7.playerLanding(player2);
+		q8.playerLanding(player2);
+		q9.playerLanding(player2);
+		q10.playerLanding(player2);
+		q11.playerLanding(player2);
+		q12.playerLanding(player2);
+		q13.playerLanding(player2);
+		q14.playerLanding(player2);
+		q15.playerLanding(player2);
+		q16.playerLanding(player2);
+		q17.playerLanding(player2);
+		q18.playerLanding(player2);
+		q19.playerLanding(player2);
+		q20.playerLanding(player2);
+		q21.playerLanding(player2);
+		q22.playerLanding(player2);
+		q23.playerLanding(player2);
+		q24.playerLanding(player2);
+		q25.playerLanding(player2);
+		q26.playerLanding(player2);
+		q27.playerLanding(player2);
+		q28.playerLanding(player2);
+		q29.playerLanding(player2);
+		q30.playerLanding(player2);
+		q31.playerLanding(player2);
+		q32.playerLanding(player2);
 
 
 
@@ -371,6 +372,7 @@ void CChildView::OnPaint()
 			MemDC.SelectObject(&bruebrush);
 			MemDC.Rectangle(300, 10, 300 + AirR * 100, 30);
 		}
+
 		MemDC.SelectObject(&maincolorbrush);
 		double cos;
 		double sin;
@@ -378,7 +380,7 @@ void CChildView::OnPaint()
 		sin = yforce / sqrt(yforce*yforce + (1 - yforce)*(1 - yforce));
 		ga += force;
 
-		if (WP == 1)
+		if (thisturnplayer == 1)
 		{
 			if (player1.isRight == true)
 			{
@@ -419,7 +421,7 @@ void CChildView::OnPaint()
 
 		}
 
-		if (WP == -1)
+		if (thisturnplayer == -1)
 		{
 			if (player2.isRight == true)
 			{
@@ -523,7 +525,7 @@ void CChildView::OnPaint()
 	bmp.DeleteObject();
 
 	pOldBmp->DeleteObject();
-	Sleep(1);
+	//Sleep(1);
 }
 
 
@@ -538,47 +540,6 @@ void CChildView::blcol(Land &l)
 }
 
 
-void CChildView::plcol(Player &p, Land &l)
-{
-	if ((l.pointx - l.sizex <p.pointx + p.sizeX  &&
-		l.pointx + l.sizex>p.pointx + p.sizeX) && 
-		(l.pointy - l.sizey < p.pointy - p.sizeY &&
-		l.pointy + l.sizey >p.pointy - p.sizeY))
-	{
-		Twall = true;
-		p.pointx = p.pointx - 2;
-	}
-
-	if ((l.pointx - l.sizex <p.pointx - p.sizeX  &&
-		l.pointx + l.sizex>p.pointx - p.sizeX) &&
-		(l.pointy - l.sizey < p.pointy - p.sizeY &&
-		l.pointy + l.sizey >p.pointy - p.sizeY))
-	{
-		Twall = true;
-		p.pointx = p.pointx + 2;
-	}
-
-	if ((l.pointx - l.sizex <p.pointx + p.sizeX  &&
-		l.pointx + l.sizex>p.pointx + p.sizeX) &&
-		(l.pointy - l.sizey < p.pointy + p.sizeY &&
-		l.pointy + l.sizey >p.pointy + p.sizeY))
-	{
-		p.onland = true;
-		p.pointy = p.pointy - 1.6;
-		p.gravity = 0;
-	}
-
-	if ((l.pointx - l.sizex <p.pointx - p.sizeX  &&
-		l.pointx + l.sizex>p.pointx - p.sizeX) &&
-		(l.pointy - l.sizey < p.pointy + p.sizeY &&
-		l.pointy + l.sizey >p.pointy + p.sizeY))
-	{
-		p.onland = true;
-		p.pointy = p.pointy - 1.6;
-		p.gravity = 0;
-	}
-}
-
 void CChildView::ballmoveout()
 {
 	player1.fire = false;
@@ -587,7 +548,7 @@ void CChildView::ballmoveout()
 	ball.y = 100;
 	ball.sx = 0;
 	ball.sy = 0;
-	WP *= -1;
+	thisturnplayer *= -1;
 	AirR = rand() % 7 - 3;
 	player1.sp = 300;
 	player2.sp = 300;
@@ -618,9 +579,9 @@ void CChildView::firevector()
 bool addforce = false;
 void CChildView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-	if (Twall == false)
+	if (player1.Twall==false || player2.Twall == false)
 	{
-		if (WP == 1)
+		if (thisturnplayer == 1)
 		{
 			switch (nChar)
 			{
@@ -684,7 +645,7 @@ void CChildView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 			}
 		}
 
-		if (WP == -1)
+		if (thisturnplayer == -1)
 		{
 			switch (nChar)
 			{
@@ -751,7 +712,7 @@ void CChildView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 void CChildView::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-	if (WP == 1)
+	if (thisturnplayer == 1)
 	{
 		switch (nChar)
 		{
@@ -785,7 +746,7 @@ void CChildView::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 		}
 	}
 
-	if (WP == -1)
+	if (thisturnplayer == -1)
 	{
 		switch (nChar)
 		{

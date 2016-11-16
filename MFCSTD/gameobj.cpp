@@ -31,6 +31,7 @@ Player::Player(int sizex, int sizey, double x, double y)
 	isRight = true;
 	onland = false;
 	die = false;
+	Twall = false;
 }
 void Player::playermove()
 {
@@ -97,6 +98,7 @@ void Player::playermaxpoint()
 		gravity = 3;
 	}
 }
+
 
 
 //발사체 클래스========================================================================
